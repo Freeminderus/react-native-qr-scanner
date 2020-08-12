@@ -34,7 +34,7 @@ export default class QRScannerView extends Component {
     scanBarImage: null,
     scanBarHeight: 1.5,
     scanBarMargin: 6,
-    hintText: '将二维码/条码放入框内，即可自动扫描',
+    hintText: '',
     hintTextStyle: {
       color: '#fff',
       fontSize: 14,
@@ -161,7 +161,7 @@ export default class QRScannerView extends Component {
 
   //绘制扫描线
   _renderScanBar = () => {
-    if (!this.props.isShowScanBar) 
+    if (!this.props.isShowScanBar)
       return;
     if (this.props.scanBarImage) {
       return <Image
